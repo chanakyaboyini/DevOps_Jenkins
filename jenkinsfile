@@ -1,0 +1,13 @@
+pipeline{
+    agent{
+        label "any"
+    }
+    stages{
+        stage("Git Checkout")
+        
+        steps{
+            git branch: 'main', url: 'https://github.com/chanakyaboyini/DevOps_Jenkins.git'
+        }
+        
+        }}
+            
