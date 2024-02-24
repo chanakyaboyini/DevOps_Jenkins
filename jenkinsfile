@@ -8,15 +8,11 @@ pipeline{
         stage("Git Checkout"){
         
         steps{
-
-            script{
-
-           gitCheckout(
-
-            branch: "main",
-            url: "https://github.com/chanakyaboyini/DevOps_Jenkins.git"
+             gitCheckout(
+                 branch: "main",
+                 url: "https://github.com/chanakyaboyini/DevOps_Jenkins.git"
            )
-        }
+   
         }
         }}
 }
