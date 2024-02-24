@@ -8,7 +8,11 @@ pipeline{
 
             script{
 
-            git branch: 'main', url: 'https://github.com/chanakyaboyini/DevOps_Jenkins.git'
+           gitCheckout(
+
+            branch: "main"
+            url: "https://github.com/chanakyaboyini/DevOps_Jenkins.git"
+           )
         }
         }
         }}
