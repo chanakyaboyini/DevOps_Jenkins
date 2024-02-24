@@ -5,16 +5,24 @@ pipeline{
     agent any 
 
     stages{
-        stage("Git Checkout"){
-        
-        steps{
-             gitCheckout(
-                 branch: "main",
-                 url: "https://github.com/chanakyaboyini/DevOps_Jenkins.git"
-           )
+            stage("Git Checkout"){
+            
+            steps{
+                gitCheckout(
+                    branch: "main",
+                    url: "https://github.com/chanakyaboyini/DevOps_Jenkins.git"
+            )
    
         }
-        }}
+        }
+        stage("Unit testing Maven"){
+        
+        steps{
+             script{
+                mvnTest()
+             }
+        }
 }
-
+    }
+}
             
