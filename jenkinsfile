@@ -15,6 +15,7 @@ pipeline{
    
         }
         }
+        agent DevOps_Node
         stage("Unit testing Maven"){
         
         steps{
