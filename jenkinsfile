@@ -2,7 +2,7 @@
 
 
 pipeline{
-    agent DevOps_Node 
+    agent any
 
     stages{
             stage("Git Checkout"){
