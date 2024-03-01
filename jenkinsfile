@@ -11,9 +11,9 @@ pipeline{
 
     stages{
 
-            when { expression { param.action == 'Create'}}
-            stage("Git Checkout"){
             
+            stage("Git Checkout"){
+            when { expression { param.action == 'Create'}}
             steps{
                 gitCheckout(
                     branch: "main",
@@ -50,7 +50,8 @@ pipeline{
                 StaticCodeAnalysis()
              }
 }
-
+    }
+}
 
 
 
