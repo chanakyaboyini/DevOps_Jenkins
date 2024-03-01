@@ -2,7 +2,7 @@
 
 
 pipeline{
-    agent any 
+    agent DevOps_Node 
 
     stages{
             stage("Git Checkout"){
@@ -15,7 +15,7 @@ pipeline{
    
         }
         }
-        agent DevOps_Node
+        agent 
         stage("Unit testing Maven"){
         
         steps{
